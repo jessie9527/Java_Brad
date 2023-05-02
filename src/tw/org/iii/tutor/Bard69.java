@@ -17,6 +17,7 @@ public class Bard69 {
 		try {
 			URL url = new URL("https://www.ispan.com.tw");
 			HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
+			// 建立一個HttpsURLConnection物件，用來進行HTTP請求
 			conn.connect();
 			// 用Bard65的21行到28行
 //			InputStream in = conn.getInputStream();
@@ -25,6 +26,7 @@ public class Bard69 {
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(conn.getInputStream()));
 			String line;
+			// 逐行讀取網頁內容，並輸出到控制台
 			while ((line = reader.readLine()) != null) {
 				System.out.println(line);
 			}

@@ -15,11 +15,12 @@ import javax.swing.JPanel;
 
 import tw.org.iii.myclasses.Drawer2;
 import tw.org.iii.myclasses.Drawer3;
+import tw.org.iii.myclasses.MyClock;
 
 public class Sign extends JFrame{
 	private Drawer3 drawer;
 	private JButton clear, undo, redo, chColor, saveObj, loadObj, saveJPEG;
-	
+	private MyClock myClock;
 	// 建立視窗物件
 	public Sign() {
 		super("簽名");
@@ -35,11 +36,13 @@ public class Sign extends JFrame{
 		saveObj = new JButton("Save Obj");
 		loadObj = new JButton("Load Obj");
 		saveJPEG = new JButton("Save JPEG");
+		myClock = new MyClock();
 		
 		JPanel top = new JPanel(new FlowLayout());
 		top.add(clear);top.add(undo);top.add(redo);
 		top.add(chColor);top.add(saveObj);top.add(loadObj);
 		top.add(saveJPEG);
+		top.add(myClock);
 		
 		add(top, BorderLayout.NORTH);
 		
