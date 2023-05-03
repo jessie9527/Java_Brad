@@ -11,7 +11,7 @@ public class Bard67 {
 
 	public static void main(String[] args) {
 		try {
-			File source = new File("dir1/pariwat-pannium-WLk7wdUpKXc-unsplash.jpg");
+			File source = new File("dir1/iconmonstr-soccer-1-64.png");
 			BufferedInputStream bin = 
 				new BufferedInputStream(
 					new FileInputStream(source));
@@ -21,7 +21,7 @@ public class Bard67 {
 			System.out.println("read ok");
 			
 			Socket socket = new Socket(
-					InetAddress.getByName("10.0.104.241"), 9999);
+					InetAddress.getByName("10.0.104.65"), 9999);
 			BufferedOutputStream bout = 
 				new BufferedOutputStream(socket.getOutputStream());
 			bout.write(buf);

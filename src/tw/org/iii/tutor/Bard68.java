@@ -19,7 +19,7 @@ public class Bard68 {
 			String hostname = socket.getInetAddress().getHostAddress();
 			BufferedOutputStream bout = 
 					new BufferedOutputStream(
-							new FileOutputStream(String.format("dir2/ok.jpg", hostname)));
+							new FileOutputStream(String.format("dir2/ball1.png", hostname)));
 			
 			while ((len = bin.read(buf)) != -1) {
 				bout.write(buf, 0, len);
