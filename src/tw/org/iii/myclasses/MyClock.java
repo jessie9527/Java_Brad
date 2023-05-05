@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 public class MyClock extends JLabel{
 	private Timer timer;
 	private SimpleDateFormat sdf;
-	// 常用, 不用執行續, 精準度不高。
+	// 常用, (不用執行續, 精準度不高)。
 	
 	public MyClock() {
 		sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

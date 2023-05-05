@@ -19,20 +19,21 @@ public class Bard70 {
 	public static void main(String[] args) {
 		try {
 			URL url = new URL("https://data.coa.gov.tw/Service/OpenData/ODwsv/ODwsvTravelStay.aspx");
+			// 強制轉型
 			HttpsURLConnection conn = (HttpsURLConnection)url.openConnection();
 			conn.connect();
 			
+			// 一次讀取資料(一點點的開始讀取資料(有一個管道)), BufferedReader效能比較好
 			BufferedReader reader = new BufferedReader(
 					new InputStreamReader(conn.getInputStream()));
 			String line;
-			StringBuffer sb = new StringBuffer();
+			// 只能存字串的緩衝區
+			// 因為知道是字串所以用StringBuffer
+			StringBuffer sb = new StringBuffer();	
 			while ((line = reader.readLine()) != null) {
 				sb.append(line);
 			}
-			reader.close();
-			
-			conn.getInputStream();
-			
+			reader.close();			
 			System.out.println("OK");	
 			
 			parseJSON(sb.toString());
@@ -51,6 +52,8 @@ public class Bard70 {
 			System.out.println(row.getString("Name") + ":" + row.getString("Address"));
 			// 取得資料內容
 		}
+		
+		
 	}
 	
 	

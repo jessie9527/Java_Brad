@@ -10,8 +10,9 @@ import java.util.Properties;
 import java.util.Scanner;
 
 public class JDBC07 {
-
+	// 查詢資料的關鍵字
 	public static void main(String[] args) {
+		// 初始化Scanner, 允許程序從鍵盤讀取使用者輸入
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Keyword = ");
 		String key = scanner.next();
@@ -24,6 +25,7 @@ public class JDBC07 {
 			
 			// SELECT * FROM food WHERE name LIKE '%key%' OR address LIKE '%key%' OR tel LIKE '%key%';
 			String sql = "SELECT * FROM food WHERE name LIKE ? OR address LIKE ? OR tel LIKE ?";
+			// "%" + key + "%" : 這個表示關鍵字前後面可以有其他字
 			String var = "%" + key + "%";
 			
 			// 查詢用PreparedStatement

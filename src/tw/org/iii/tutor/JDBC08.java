@@ -9,12 +9,14 @@ import java.util.Properties;
 import java.util.Scanner;
 
 public class JDBC08 {
-
+	// 查頁數裡的資料(輸入超過最大值就給錯誤訊息)
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Page = ");
 		int page = scanner.nextInt();
+		// 一頁有幾筆數資料
 		int rpp = 10;
+		// 每一頁的第一筆開始的資料
 		int start = (page - 1)*rpp;
 		
 		Properties prop = new Properties();
@@ -25,12 +27,14 @@ public class JDBC08 {
 			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/iii", prop);
 			
 			Statement stmt = conn.createStatement();
+			// select指令要用executeQuery方法
 			ResultSet rs = stmt.executeQuery("SELECT count(*) total FROM food");
 			rs.next();
 			int total = rs.getInt("total");
 			// ceil:遇到小數選最大值
 			int pages = (int)Math.ceil(total *1.0/ rpp);
-					
+			
+			// 頁數超過給錯誤訊息
 			if (pages <= 0 || page > pages) throw new MyPageException("Page Error");
 			
 			// LIMIT 10: 從0開始取10筆 、 LIMIT X, Y: 從X開始Y筆

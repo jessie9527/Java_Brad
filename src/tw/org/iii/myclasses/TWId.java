@@ -19,10 +19,10 @@ public class TWId {
 		// 推給(boolean isMale, int area), 這邊是boolean所以前者不變
 	}
 	
-	public TWId(int area) {
-		this((int)(Math.random()*2) == 0, area);	
-		// 推給(boolean isMale, int area), 這邊是area所以後者不變
-	}
+//	public TWId(int area) {
+//		this((int)(Math.random()*2) == 0, area);	
+//		// 推給(boolean isMale, int area), 這邊是area所以後者不變
+//	}
 	
 	public TWId(boolean isMale, int area) {
 		String c1 = letters.substring(area, area+1);
