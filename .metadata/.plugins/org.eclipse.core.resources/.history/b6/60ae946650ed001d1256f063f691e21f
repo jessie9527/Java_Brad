@@ -1,0 +1,28 @@
+package tw.org.iii.tutor;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+
+import tw.org.iii.myclasses.MyTable;
+
+public class JDBC18 extends JFrame{
+	private MyTable myTable;
+	public JDBC18() {
+		
+		setLayout(new BorderLayout());
+		
+		myTable = new MyTable();
+		add(myTable, BorderLayout.CENTER);
+		
+		setSize(800, 640);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		new JDBC18();
+		
+	}
+
+}

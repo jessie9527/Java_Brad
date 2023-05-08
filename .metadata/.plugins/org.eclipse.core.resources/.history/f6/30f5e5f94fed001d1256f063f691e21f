@@ -1,0 +1,13 @@
+package tw.org.iii.myclasses;
+
+import javax.swing.JTable;
+
+public class MyTable extends JTable{
+	private FoodDB foodDB;
+	
+	public MyTable() throws Exception{
+		foodDB = new FoodDB();
+		foodDB.queryDate(FoodDB.SQL_QUERY);
+	}
+
+}

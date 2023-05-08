@@ -1,0 +1,18 @@
+package tw.org.iii.tutor;
+
+public class Thead {
+
+	public static void main(String[] args) {
+		int i = 1;
+		while (true) {
+			i += 2;
+			if (i > 9) {
+				break;
+			}
+			System.out.println(i);
+		}
+		
+		
+
+	}
+}

@@ -1,0 +1,29 @@
+package tw.org.iii.myclasses;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class FoodDB {
+	private static final String USER = "root";
+	private static final String PASSWORD = "root";
+	private static final String URL = "jdbc:mysql://localhost/iii";
+	private static final String SQL_QUERT = "SELECT * FROM Food";
+	
+	private Connection conn;
+	private ResultSet rs;
+	
+	public FoodDB() throws SQLException{
+		Properties prop = new Properties();
+		prop.put("user", USER);
+		prop.put("password", PASSWORD);
+		conn = DriverManager.getConnection(URL, prop);
+	}
+	
+	public void queryDate(String sql) {
+		
+	}
+	
+}

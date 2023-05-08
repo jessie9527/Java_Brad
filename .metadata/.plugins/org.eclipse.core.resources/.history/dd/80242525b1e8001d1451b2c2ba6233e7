@@ -1,0 +1,21 @@
+package tw.org.iii.tutor;
+
+public class Bard72 {
+
+	public static void main(String[] args) {
+		Bard721 obj1 = new Bard721();
+		Bard721 obj2 = new Bard721();
+		obj1.start(); obj2.start();
+		System.out.println("main");
+	}
+
+}
+
+class Bard721 extends Thread{
+	@Override
+	public void run() {
+		for (int i = 0;i < 10;i++) {
+			System.out.println(i);
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package tw.org.iii.tutor;
+
+public class JDBC17 {
+	private static final String USER = "root";
+	private static final String PASSWORD = "root";
+	private static final String URL = "jdbc:mysql://localhost/iii";
+	private static final String SQL_QUERT = "SELECT * FROM user";
+	
+	public static void main(String[] args) {
+
+	}
+
+}

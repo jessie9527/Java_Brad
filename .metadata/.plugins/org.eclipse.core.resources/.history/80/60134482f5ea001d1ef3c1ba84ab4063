@@ -1,0 +1,12 @@
+package tw.org.iii.tutor;
+
+public class JDBC12 {
+	private static final String USER = "root";
+	private static final String PASSWORD = "root";
+	private static final String URL = "jdbc:mysql://localhost/northwind";
+
+	public static void main(String[] args) {
+		
+	}
+
+}

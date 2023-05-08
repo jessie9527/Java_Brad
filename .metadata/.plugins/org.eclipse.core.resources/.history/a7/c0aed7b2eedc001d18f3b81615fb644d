@@ -1,0 +1,29 @@
+package tw.org.iii.tutor;
+
+public class Bard08 {
+
+	public static void main(String[] args) {
+		int score = (int) (Math.random() * 101);
+		// Math.random()的範圍是0~1.0(不包含1), 0~100有101個數, 所以要*101
+		System.out.println(score);
+		if (score >= 90) {
+			System.out.println("A");
+		} else {
+			if (score >= 80) {
+				System.out.println("B");
+			}else {
+				if (score >= 70) {
+					System.out.println("C");
+				}else {
+					if (score >= 60) {
+						System.out.println("D");
+					}else {
+						System.out.println("E");
+					}
+				}
+			}
+		}
+			
+	}
+		
+}

@@ -1,0 +1,11 @@
+package tw.org.iii.tutor;
+
+public class JDBC13 {
+	
+	public static void main(String[] args) {
+		private static final String USER = "root";
+		private static final String PASSWORD = "root";
+		private static final String URL = "jdbc:mysql://localhost/northwind";
+	}
+
+}

@@ -1,0 +1,15 @@
+package tw.org.iii.tutor;
+
+import java.sql.Connection;
+
+public class JDBC10 {
+
+	public static void main(String[] args) {
+		private static Connection conn;
+		private static final String USER = "root";
+		private static final String PASSWORD = "root";
+		private static final String URL = "jdbc:mysql://localhost/iii";
+		private static final String SQL_LOGIN = "SELECT * FROM member WHERE account = ?";
+	}
+
+}

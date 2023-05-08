@@ -1,0 +1,57 @@
+package tw.org.iii.myclasses;
+
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class MyTable extends JTable{
+	private FoodDB foodDB;
+	private MyModel myModel;
+	
+	public MyTable() throws Exception{
+		foodDB = new FoodDB();
+		foodDB.queryDate(FoodDB.SQL_QUERY);
+		
+		myModel = new MyModel();
+		setModel(myModel);
+	}
+
+	private class MyModel extends DefaultTableModel{
+
+//		@Override
+//		public void removeRow(int row) {
+//			// TODO Auto-generated method stub
+//			super.removeRow(row);
+//		}
+
+		@Override
+		public int getRowCount() {
+			// TODO Auto-generated method stub
+			return super.getRowCount();
+		}
+
+		@Override
+		public int getColumnCount() {
+			// TODO Auto-generated method stub
+			return super.getColumnCount();
+		}
+
+		@Override
+		public boolean isCellEditable(int row, int column) {
+			// TODO Auto-generated method stub
+			return super.isCellEditable(row, column);
+		}
+
+		@Override
+		public Object getValueAt(int row, int column) {
+			// TODO Auto-generated method stub
+			return super.getValueAt(row, column);
+		}
+
+		@Override
+		public void setValueAt(Object aValue, int row, int column) {
+			// TODO Auto-generated method stub
+			super.setValueAt(aValue, row, column);
+		}
+		
+	}
+}

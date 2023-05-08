@@ -1,0 +1,55 @@
+package tw.org.iii.tutor;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.Properties;
+
+import org.json.JSONString;
+import org.json.JSONStringer;
+import org.json.JSONWriter;
+
+public class JDBC12 {
+	private static final String USER = "root";
+	private static final String PASSWORD = "root";
+	private static final String URL = "jdbc:mysql://localhost/northwind";
+
+	public static void main(String[] args) {
+		String sql = 
+				"SELECT e.FirstName, e.LastName, SUM(`order details`.`UnitPrice` * `order details`.`Quantity`) AS `SUM` "
+				+ "from orders o "
+				+ "join employees e on (o.EmployeeID = e.EmployeeID) "
+				+ "JOIN `order details` ON (o.OrderID = `order details`.`OrderID`) "
+				+ "GROUP BY e.FirstName, e.LastName "
+				+ "ORDER BY `SUM` DESC";
+		
+		
+		Properties prop = new Properties();
+		prop.put("user", USER);
+		prop.put("password", PASSWORD);
+		try {
+			Connection conn = DriverManager.getConnection(URL, prop);
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			
+			JSONStringer js = new JSONStringer();
+			JSONWriter jw = js.array();
+			while (rs.next()) {
+				String firstName = rs.getString("Firstname");
+				String lastName = rs.getString("Lastname");
+				Double sum = rs.getDouble("Sum");
+				
+				jw.endArray();
+				jw.key("firstname").value(firstName);
+				jw.key("lastname").value(lastName);
+				jw.key("sum").value(sum);
+				jw.endObject();
+			}
+			
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+
+}

@@ -1,0 +1,13 @@
+package tw.org.iii.tutor;
+
+import tw.org.iii.myclasses.BCrypt;
+
+public class Bard75 {
+
+	public static void main(String[] args) {
+		String passwd = "123456";
+		String hwPasswd = BCrypt.hashpw(passwd, BCrypt.gensalt());
+		System.out.println(hwPasswd);
+	}
+
+}
