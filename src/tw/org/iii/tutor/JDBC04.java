@@ -22,9 +22,9 @@ public class JDBC04 {
 			// 資料型態 變數 = Connection的prepareStatement(sql)方法
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			// PreparedStatement物件就可以透過setXXX()的方法，將具體的參數值設定到問號位置
-			pstmt.setString(1, "Brad");
-			pstmt.setString(2, "345");
-			pstmt.setString(3, "1998-03-04");
+			pstmt.setString(1, "cherry");
+			pstmt.setString(2, "123");
+			pstmt.setString(3, "1999-01-15");
 			// 執行這個SQL指令，將資料寫入資料庫中
 			pstmt.executeUpdate();
 			

@@ -29,6 +29,8 @@ public class JDBC08 {
 			Statement stmt = conn.createStatement();
 			// select指令要用executeQuery方法
 			ResultSet rs = stmt.executeQuery("SELECT count(*) total FROM food");
+			// 游標目前在資料前面(before first)
+			// next():判斷游標是否可以往後,可以(有資料)就回傳ture,不行(空的)就回傳false 
 			rs.next();
 			int total = rs.getInt("total");
 			// ceil:遇到小數選最大值
