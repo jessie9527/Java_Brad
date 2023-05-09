@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Brad Big Company</title>
+	</head>
+	<body>
+		<!-- method="get"指到後段的doGet，method="post"指到後段的doPost -->
+		<form action="Brad09" method="get">
+		Account:  <input type="text" name="account" /><br />
+		password: <input type="password" name="passwd" /><br />
+		<input type="submit" value="Click Me" />
+		</form>
+	</body>
+</html>

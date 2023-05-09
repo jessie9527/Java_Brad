@@ -1,0 +1,39 @@
+package tw.brad.ok;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/Brad08")
+public class Brad08 extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String x = request.getParameter("x");
+		String y = request.getParameter("y");
+		String result = "";
+		try {
+			int temp = Integer.parseInt(x) + Integer.parseInt(y);	
+			result += temp;
+		}catch(Exception e){
+			
+		}
+				
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		out.append("<form>")
+		.append("<input name='x' value='x' />\n")
+		.append("+\n")
+		.append("<input name='y' value='y' />\n")
+		.append("<input type='submit' value='='>\n")
+		.append(result)
+		.append("</form>");
+		
+	}
+}

@@ -31,16 +31,19 @@ public class JDBC17 {
 			}
 			System.out.println("----");
 			
-			if (rs.first()) {
+			if (rs.first()) {		//要成功執行要寫23 24行
+
+				//測試是否移動到第一筆
 				System.out.println("move first OK");
 				String id = rs.getString("id");
 				String name = rs.getString("cname");
 				System.out.printf("%s:%s\n", id ,name);
-				
+				//----用絕對位置移動測試
 				rs.absolute(3);
 				String id4 = rs.getString("id");
 				String name4 = rs.getString("cname");
 				System.out.printf("%s:%s\n", id4 ,name4);
+				//現在資料在"3"
 			}else {
 				System.out.println("OK");
 			}
@@ -50,10 +53,12 @@ public class JDBC17 {
 			rs.updateString("cname", "new aa");
 			rs.updateString("tel", "789");
 			rs.updateRow();
+			// 上面兩個只是放在暫存, 要這個才能update 成功
 			
 			System.out.println("----");
 			// 刪除
 			rs.absolute(2);
+			//確認是否在 2
 			String id = rs.getString("id");
 			String name = rs.getString("cname");
 			System.out.printf("%s:%s\n", id ,name);
@@ -63,6 +68,7 @@ public class JDBC17 {
 			String id4 = rs.getString("id");
 			String name4 = rs.getString("cname");
 			System.out.printf("%s:%s\n", id4 ,name4);
+			 //已砍掉 id=2 ,刪除後會移動到第一個欄位
 			System.out.println("----");
 			
 			// 游標會移到一個空的、可編輯的新記錄的位置

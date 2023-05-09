@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Brad Big Company</title>
+	</head>
+	<body>
+		<form action="Brad09"></form>
+		Account:  <input type="text" name="account" /><br />
+		password: <input type="text" name="passwd" /><br />
+		<button>click me</button>
+	</body>
+</html>

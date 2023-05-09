@@ -21,6 +21,7 @@ public class JDBC13 {
 			Connection conn = DriverManager.getConnection(URL, prop);
 			PreparedStatement pstmt = conn.prepareStatement(SQL_UPDATE_ICON);
 			
+			// 新增圖片(用java.io的輸入串流傳到資料庫)
 			FileInputStream fin = new FileInputStream("dir2/ball1.png");
 			pstmt.setBinaryStream(1, fin);
 			pstmt.setInt(2, 1);

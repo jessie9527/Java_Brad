@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.lastextjar" value="D:\Brad\mysql-connector-j-8.0.33"/>
+	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
+	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-17"/>
+	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo.comments" value="false"/>
+	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -61,5 +65,28 @@
 	</section>
 	<section name="ClasspathContainerSelectionPage">
 		<item key="index" value="0"/>
+	</section>
+	<section name="OverrideMethodDialog">
+		<item key="showtypes" value="true"/>
+	</section>
+	<section name="DialogBounds_OverrideMethodDialog">
+		<item key="DIALOG_X_ORIGIN" value="628"/>
+		<item key="DIALOG_Y_ORIGIN" value="97"/>
+		<item key="DIALOG_WIDTH" value="682"/>
+		<item key="DIALOG_HEIGHT" value="634"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft JhengHei UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft JhengHei UI"/>
+	</section>
+	<section name="FatJarPackageWizard">
+		<item key="FatJarPackageWizardPage.ANTSCRIPT_SAVE" value="false"/>
+		<item key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION" value="C:\Users\user\eclipse-workspace"/>
+		<item key="FatJarPackageWizardPage.LIBRARY_HANDLING" value="1"/>
+		<item key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME" value="Sign (1) - MySign2"/>
+		<item key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION" value="D:\Brad\mysign.jar"/>
+		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="D:\Brad\mysign.jar"/>
+		</list>
+		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
+			<item value=".xml"/>
+		</list>
 	</section>
 </section>

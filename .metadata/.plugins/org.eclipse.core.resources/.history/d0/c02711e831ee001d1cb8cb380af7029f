@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Brad Big Company</title>
+	</head>
+	<body>
+		<!-- method="get"指到後段的doGet，method="post"指到後段的doPost -->
+		<form action="Brad09" method="get">
+		Account:<input type="text" name="account" /><br />
+		Password:<input type="password" name="passwd" /><br />
+		Gender:<input type="radio" name="gender" value="m"/>Male
+			   <!-- 因為後端接收到字串都是on這樣會無法分辨，所以加上value=""後端就可以去判斷 -->
+			   <input type="radio" name="gender" value="f"/>Female <br />
+		興趣:		  <input type="checkbox" name="hobbies1"/> 打電腦
+				  <input type="checkbox" name="hobbies2"/> 打電玩
+				  <input type="checkbox" name="hobbies3"/> 打籃球
+				  <input type="checkbox" name="hobbies4"/> 打麻將
+				  <input type="checkbox" name="hobbies5"/> 打毛線
+				  <input type="checkbox" name="hobbies6"/> 打小孩<br />
+				  
+		<input type="submit" value="Click Me" />
+		<input type="reset" value="Reset" />
+		</form>
+	</body>
+</html>

@@ -24,13 +24,14 @@ public class JDBC12 {
 				+ "GROUP BY e.FirstName, e.LastName "
 				+ "ORDER BY `SUM` DESC";
 		
-		
+		// 登入資料庫
 		Properties prop = new Properties();
 		prop.put("user", USER);
 		prop.put("password", PASSWORD);
 		try {
 			Connection conn = DriverManager.getConnection(URL, prop);
 			PreparedStatement pstmt = conn.prepareStatement(sql);
+			// resultset是一種存放資料庫結果的表格(table)，這個結果通常是經由執行SQL語法詢問資料庫所得出的
 			ResultSet rs = pstmt.executeQuery();
 			
 			JSONStringer js = new JSONStringer();

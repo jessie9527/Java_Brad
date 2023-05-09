@@ -1,0 +1,28 @@
+package tw.org.iii.tutor;
+
+public class A123 {
+
+	public static void main(String[] args) {
+		System.out.println("Ready");
+		
+		Coffee cof = new Coffee();
+
+//		cof.run();
+		cof.start();
+		
+		System.out.println("Finish");
+	}
+
+
+	static class Coffee extends Thread {
+
+		@Override
+		public void run() {
+			while(true) {
+				System.out.println("Hello");
+			}
+		}
+	}
+	
+
+}
