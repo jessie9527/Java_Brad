@@ -14,7 +14,7 @@ public class Brad08 extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		// request接收html(網頁)回傳的值
 		String x = request.getParameter("x");
 		String y = request.getParameter("y");
 		// 表單裡代表的值
@@ -22,7 +22,7 @@ public class Brad08 extends HttpServlet {
 		System.out.println(op);
 
 		String result = "";
-		// 做op的值判斷
+		// 做op的值判斷(用switch迴圈)
 		try {
 			switch (op) {
 			case "1": {
@@ -54,6 +54,7 @@ public class Brad08 extends HttpServlet {
 		}
 
 		response.setContentType("text/html; charset=UTF-8");
+		// response:把java(後端)執行出來的結果輸出到網頁上
 		PrintWriter out = response.getWriter();
 		out.append("<form>").append(String.format("<input name='x' value='%s' />\n", x)).append("<select name='op'>")
 				.append("<option value='1'> + </option>").append("<option value='2'> - </option>")

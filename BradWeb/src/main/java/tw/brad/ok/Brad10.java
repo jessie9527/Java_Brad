@@ -19,6 +19,7 @@ import javax.servlet.http.Part;
 		)
 public class Brad10 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// Part需要遷入@MultipartConfig
 		Part upload = request.getPart("upload");
 		System.out.println("Size: " + upload.getSize());
 		System.out.println("Type: " + upload.getContentType());

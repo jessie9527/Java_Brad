@@ -18,8 +18,10 @@ public class Brad07 extends HttpServlet {
 		String x = request.getParameter("x");
 		String y = request.getParameter("y");
 //		System.out.println(x + ";" + y);
+		// Integer.parseInt() 方法可以將字符串轉換為整數
 		int result = Integer.parseInt(x) + Integer.parseInt(y);
 		
+		// 設定回應內容類型
 		response.setContentType("text/html; charset=UTF-8");
 		// java.io
 		PrintWriter out = response.getWriter();

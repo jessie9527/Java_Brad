@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Brad Big Company</title>
+	</head>
+	<body>
+		<div>
+		<h1>Brad Big Company</h1>
+		<br>
+		<form action="">
+			<input name="x">
+			+
+			<input name="x">
+			<input type="submit" value="=">
+		</form>
+		</div>
+	</body>
+</html>

@@ -1,9 +1,0 @@
-package tw.org.iii.tutor;
-
-public class JDBC05 {
-
-	public static void main(String[] args) {
-		
-		
-	}
-}

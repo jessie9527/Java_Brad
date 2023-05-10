@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Brad Big Company</title>
+	</head>
+
+	<body>
+	<!-- 畫面維護 -->
+		<div>
+		<h1>Brad Big Company</h1>
+		<br>
+		<form action="">
+			<input name="x" value="">
+			+
+			<input name="y" value="">
+			<input type="submit" value="=">
+			<span></span>
+		</form>
+		</div>
+		Copyright Brad
+	</body>
+</html>
